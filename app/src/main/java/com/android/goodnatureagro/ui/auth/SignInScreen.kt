@@ -69,7 +69,6 @@ fun SignInScreen(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-
                 // App Logo
                 val isDarkTheme = isSystemInDarkTheme()
                 Image(
@@ -82,21 +81,24 @@ fun SignInScreen(
                         .padding(bottom = 16.dp)
                 )
 
-                // App Logo or Title
+                // Title
                 Text(
                     text = "Farmer Management System",
                     style = MaterialTheme.typography.titleLarge
                 )
-                // App Logo or Title
+
                 Text(
-                    text = "login into your account",
+                    text = "Login into your account",
                     style = MaterialTheme.typography.bodyLarge
                 )
 
                 // Email Field
                 OutlinedTextField(
                     value = email,
-                    onValueChange = { email = it },
+                    onValueChange = {
+                        email = it
+                        showError = null  // Clear error when user types
+                    },
                     label = { Text("Email") },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth()
@@ -105,7 +107,10 @@ fun SignInScreen(
                 // Password Field
                 OutlinedTextField(
                     value = password,
-                    onValueChange = { password = it },
+                    onValueChange = {
+                        password = it
+                        showError = null  // Clear error when user types
+                    },
                     label = { Text("Password") },
                     singleLine = true,
                     visualTransformation = PasswordVisualTransformation(),
@@ -124,14 +129,28 @@ fun SignInScreen(
                 // Sign In Button
                 Button(
                     onClick = {
-                        viewModel.signInWithEmail(email, password)
+                        when {
+                            email.isEmpty() && password.isEmpty() -> {
+                                showError = "Please enter your email and password"
+                            }
+                            email.isEmpty() -> {
+                                showError = "Please enter your email"
+                            }
+                            password.isEmpty() -> {
+                                showError = "Please enter your password"
+                            }
+                            else -> {
+                                showError = null
+                                viewModel.signInWithEmail(email, password)
+                            }
+                        }
                     },
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text("Sign In")
                 }
 
-                // Divider with "or"
+                // Or Divider
                 Row(
                     modifier = Modifier.fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
