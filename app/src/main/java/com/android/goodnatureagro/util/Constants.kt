@@ -2,7 +2,7 @@ package com.android.goodnatureagro.util
 
 object Constants {
     // API Configuration
-    
+
     // Update with your actual API URL
     const val BASE_URL = "http://192.168.1.189:8000/api/"
     const val CONNECT_TIMEOUT = 30L
