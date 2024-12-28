@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "340639218084",
+    "project_id": "good-nature-agro-e0f34",
+    "storage_bucket": "good-nature-agro-e0f34.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:340639218084:android:7e396cc4cf1d57fb46a931",
+        "android_client_info": {
+          "package_name": "com.android.goodnatureagro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5RJ16v1AvUD6rSsTiBvUkPa5CBPATrUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

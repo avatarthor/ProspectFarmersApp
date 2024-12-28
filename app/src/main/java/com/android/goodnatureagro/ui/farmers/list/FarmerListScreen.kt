@@ -10,6 +10,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -67,7 +68,11 @@ fun FarmerListScreen(
         },
         floatingActionButton = {
             FloatingActionButton(onClick = onAddFarmer) {
-                Icon(Icons.Default.Add, "Add Farmer")
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = "Add Farmer",
+                    tint = Color.White
+                )
             }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }

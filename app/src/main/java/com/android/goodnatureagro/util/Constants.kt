@@ -6,7 +6,7 @@ object Constants {
     const val CONNECT_TIMEOUT = 30L
     const val READ_TIMEOUT = 30L
     const val WRITE_TIMEOUT = 30L
-    const val API_KEY = "your-secure-api-key-here"  // Replace with your actual API key
+    const val API_KEY = "FfmJnByjVVcVPwZyYliRiGaym6k1OEvK"  // Replace with your actual API key
 
     // API Headers
     object Headers {

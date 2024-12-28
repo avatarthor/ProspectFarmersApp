@@ -17,10 +17,11 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            GoodNatureAgroTheme {
+            GoodNatureAgroTheme(dynamicColor = false) {  // Explicitly disable dynamic colors
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = MaterialTheme.colorScheme.background,
+                    contentColor = MaterialTheme.colorScheme.onBackground
                 ) {
                     val navController = rememberNavController()
                     NavGraph(navController = navController)

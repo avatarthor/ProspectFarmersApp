@@ -18,6 +18,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.android.goodnatureagro.R
 import com.android.goodnatureagro.util.Constants
 
+import androidx.compose.ui.graphics.Color
+
 @Composable
 fun SignInScreen(
     onSignInSuccess: () -> Unit,
@@ -145,9 +147,16 @@ fun SignInScreen(
                             }
                         }
                     },
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = MaterialTheme.colorScheme.primary,
+                        contentColor = Color.White
+                    ),
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("Sign In")
+                    Text(
+                        text = "Sign In",
+                        color = Color.White
+                    )
                 }
 
                 // Or Divider
