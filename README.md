@@ -2,6 +2,9 @@
 
 A Kotlin-based Android application for managing prospect farmers with offline-first capabilities and optional Laravel backend synchronization.
 
+## APK For Downlaod
+- Find the APK at the root of the repository
+
 ## Demo Login Details (Firebase)
 - Email: admin@goodnatureagro.com
 - Password: 12345678
