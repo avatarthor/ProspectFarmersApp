@@ -2,11 +2,14 @@ package com.android.goodnatureagro.util
 
 object Constants {
     // API Configuration
-    const val BASE_URL = "http://192.168.1.189:8000/api/"  // Update with your actual API URL
+    // Update with your actual API URL
+    const val BASE_URL = "http://192.168.1.189:8000/api/"
     const val CONNECT_TIMEOUT = 30L
     const val READ_TIMEOUT = 30L
     const val WRITE_TIMEOUT = 30L
-    const val API_KEY = "FfmJnByjVVcVPwZyYliRiGaym6k1OEvK"  // Replace with your actual API key
+
+    // key used to authenticate with the backend
+    const val API_KEY = "FfmJnByjVVcVPwZyYliRiGaym6k1OEvK"
 
     // API Headers
     object Headers {
